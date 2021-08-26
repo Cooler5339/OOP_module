@@ -35,19 +35,11 @@ class Player:
     @staticmethod
     def fight(attack, defense):
         if attack == 1 and defense == 2:
-            return 1
-        elif attack == 1 and defense == 3:
-            return -1
-        elif attack == 2 and defense == 1:
-            return -1
-        elif attack == 2 and defense == 3:
-            return 1
-        elif attack == 3 and defense == 1:
-            return 1
-        elif attack == 3 and defense == 2:
-            return -1
-        elif attack == defense:
             return 0
+        elif attack == 1 and defense == 2 or attack == 2 and defense == 3 or attack == 3 and defense == 1:
+            return 1
+        elif attack == 1 and defense == 3 or attack == 2 and defense == 1 or attack == 3 and defense == 2:
+            return -1
 
     def decrease_lives(self):
         self.lives -= 1
