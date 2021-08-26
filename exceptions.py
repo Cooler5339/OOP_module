@@ -12,5 +12,5 @@ class GameOver(Exception):
 
 
 class EnemyDown(Exception):
-    print("________________________________________")
+    pass
 
